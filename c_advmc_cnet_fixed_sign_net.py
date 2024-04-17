@@ -377,6 +377,8 @@ def progress_advmc(config):
         else:
             print("HJ1J2M: Ly={}, lx={}, J2/J1={}\n".format(config.ly, config.lx, config.Jp), flush=True)
     print("run program on:", config.device, "\n", flush=True)
+    if not os.path.isdir("./results_advmc"):
+        os.mkdir("./results_advmc")
 
     advmc_lr_list = []
 
